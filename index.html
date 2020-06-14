@@ -7,63 +7,69 @@
 </head>
 <body>
     <div id="quiz-practice">
+        <div>
+            <h1>Welcome to this simple quiz built with HTML and JavaScript!</h1>
+            <p>Press the answer that you believe is correct below each question to select your answer.</p>
+        </div>
         <div id="question-one">
             <h3>Question 1</h3>
             <p>There are five points on this map. What do they show? </p>
             <ul>
-                <li>The deepest points in the ocean</li>
-                <li>Where plastic and waste accumulate</li>
-                <li>The direction of ocean currents</li>
+                <li id="one-a" class="false">The deepest points in the ocean</li>
+                <li class="true">Where plastic and waste accumulate</li>
+                <li class="false">The direction of ocean currents</li>
             </ul>
         </div>
         <div id="question-two">
             <h3>Question 2</h3>
             <p>Which is the largest?</p>
              <ul>
-                <li>North Pacific</li>
-                <li>North Atlantic</li>
-                <li>Indian Ocean</li>
+                <li class="true">North Pacific</li>
+                <li class="false">North Atlantic</li>
+                <li class="false">Indian Ocean</li>
             </ul>
         </div>
         <div id="question-three">
             <h3>Question 3</h3>
             <p>Roughly how many pieces of plastic are there in our oceans?</p>
             <ul>
-                <li>7 billion</li>
-                <li>5 trillion</li>
-                <li>2 trillion</li>
+                <li class="false">7 billion</li>
+                <li class="true">5 trillion</li>
+                <li class="false">2 trillion</li>
             </ul>
         </div>
         <div id="question-four">
             <h3>Question 4</h3>
             <p>What percentage of our plastic waste dowe recycle every year?</p>
             <ul>
-                <li>42%</li>
-                <li>23%</li>
-                <li>7%</li>
+                <li class="false">42%</li>
+                <li class="false">23%</li>
+                <li class="true">7%</li>
             </ul>
         </div>
         <div id="question-five">
             <h3>Question 5</h3>
             <p>What year might there be more plastic than fish in the oceans?</p>
             <ul>
-                <li>That's already happened now</li>
-                <li>2050</li>
-                <li>2070</li>
+                <li class="false">That's already happened now</li>
+                <li class="true">2050</li>
+                <li class="false">2070</li>
             </ul>
         </div>
         <div id="question-bonus">
             <h3>Bonus question worth two points</h3>
             <p>Why should we be concerned about plastic waste?</p>
             <ul>
-                <li>Plastic takes many years to degrade</li>
-                <li>It is dangerous to wildlife</li>
-                <li>Plastic can enter our food chain</li>
-                <li>All of the above</li>
+                <li class="false bonus">Plastic takes many years to degrade</li>
+                <li class="false bonus">It is dangerous to wildlife</li>
+                <li class="false bonus">Plastic can enter our food chain</li>
+                <li class="true bonus">All of the above</li>
             </ul>
         </div>
     </div>
-    <button id="submit-button">Submit to view results</button>
+    <div>
+        <button id="submit-button">Submit to view results</button>
+    </div>
     <div id="results"></div>
 </body>
 <script type="text/javascript" src="assets/js/quiz.js"></script>
