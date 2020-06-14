@@ -1,20 +1,16 @@
-let oneA = document.getElementById('one-a');
+var correct = document.getElementsByClassName("true");
+var incorrect = document.getElementsByClassName("false");
 
-var correct = document.getElementsByClassName('true');
-var incorrect = document.getElementsByClassName('false');
+//Prints 'Correct' to the console when clicked
+$('.true').click(function() {
+    console.log('Correct!');
+});
 
-incorrect.onclick = function(){
-    console.log('Incorrect');
-};
+//Prints alternative message to the console when clicked
+$('.false').click(function(){
+    console.log('Sorry, that is not correct!');
+});
 
-correct.addEventListener = function(){
-    console.log('Correct');
-};
-
-oneA.onclick = function(){
-    console.log('Hello');
-};
-
-/*let quizSection = document.getElementById('quiz-practice');
-let resultsSection = document.getElementById('results');
-let submitButton = document.getElementById('submit-button');*/
+$('.true.bonus').click(function(){
+    console.log('Bonus point, well done!');
+});
