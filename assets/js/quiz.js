@@ -4,22 +4,24 @@ let results = 0;
 //Only runs function when page is ready
 $(document).ready(function(){
 
-//Prints 'Correct' to the console when clicked
-$('.true').click(function() {
-    console.log('Correct!');
+//Ammends 'Correct!' to the answer and adds a point to results score
+$('.true').one('click', function() {
     this.append(' (Correct!)');
     results ++;
 });
 
-//Prints alternative message to the console when clicked
+//Prints alternative message when incorrect answer is selected
 $('.false').click(function(){
-    console.log('Sorry, that is not correct!');
     this.append(' (Sorry, that is not correct!)');
+});
+
+//Fades out other possible quiz answers when one has been selected 
+$('li').click(function(){
+    $(this).siblings().fadeOut('500');
 });
 
 //Adds an extra point for the bonus question
 $('.true.bonus').click(function(){
-    console.log('Bonus point, well done!');
     this.append(' (Bonus point, well done!)');
     results ++
 });
@@ -28,6 +30,12 @@ $('.true.bonus').click(function(){
 $('#submit-button').click(function(){
     console.log('Your score is: ' + results);
     $('#results').append('Your score is: ' + results + '/7 points');
+});
+
+
+//Refreshes the page so the user can start again
+$('#refresh-button').click(function(){
+    location.href=location.href;
 });
 
 });
