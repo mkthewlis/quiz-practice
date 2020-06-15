@@ -27,7 +27,7 @@ $('.true.bonus').click(function(){
 });
 
 // Prints the results under the submit button
-$('#submit-button').click(function(){
+$('#submit-button').one('click', function(){
     console.log('Your score is: ' + results);
     $('#results').append('Your score is: ' + results + '/7 points');
 });
